@@ -74,7 +74,6 @@ plt.ylabel('Percentage of Job Postings (%)')
 plt.ylim(0,50)
 plt.legend(loc='best', frameon=False, bbox_to_anchor=(1,0.7))
 
-plt.savefig('Figures/Skills_Trend.png')
 plt.show()
 ```
 
@@ -87,3 +86,33 @@ plt.show()
 * SQL and Excel were consistently the most popular skills for UK Data Analyst job advertisements in 2023. However, the demand for Excel dipped sharply within the final three months.
 * The popularity of Python increased over the course of 2023, particularly in the latter half of the year.
 * Tableau, while less in demand compared to other skills, experienced a slight upward trend towards the end of 2023. 
+
+## 3: How well did jobs and skills pay for Data Analysts?
+
+### Salary Analysis for Data Jobs
+
+#### Visualise the Data
+
+```python
+#Use Seaborn to create a boxplot
+sns.boxplot(data=df_top_jobs,  x = 'salary_year_gbp', y = 'job_title_short',
+            order=job_list) #order the roles by their median salary
+sns.despine()
+
+#Format the axes
+plt.title('Annual Salary Distribution in the UK')
+plt.xlabel('Annual Salary (£)')
+plt.ylabel('')
+ax = plt.gca()
+ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x/1000):,}K')) #format the xaxis
+plt.xlim(0,200_000) #filter out some outliers and focus more on the majority of data
+plt.show()
+```
+
+#### Results
+![Boxplot of salary for top 6 UK data jobs](3_Project/Figures/Salary_Analysis.png)
+
+#### Insights
+* There is a great variation in the UK salaries of Data Analysts, Data Scientists and Data Engineers. 
+* Data for Senior Data Engineers contains a significant number out outliers, and there is very little data on the salaries for Senior Data Analysts compared to Senior Data Scientists.
+* Median salary increases with role seniority. However, the median salary for a Data Engineer (£ 82,500) was comparable with that of a Senior Data Analyst (£ 83,381).
