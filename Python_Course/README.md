@@ -157,3 +157,49 @@ plt.show()
 * Specialised, technical skills such as `postgresql`, `mssql`, `aws`, `kafka`, and `aurora` were associated with the highest paid roles. However, these were often only found in a single job description and therefore not representative of the wider skills market.
 * Whereas foundational skills such as `Tableau`, `sql` and `looker` are the most in demand even though they may not achieve the highest salary.
 * A clear distinction exists betwee the skills that are highest paid and those that are most in demand. Data analysts aiming to maximise their career potential should develop both a strong foundation of in demand skills as well as more specialised, high-paying skills. 
+
+## 4. What are the Optimal Skills for Data Analysts?
+
+### Visualise the Data
+
+```python
+#Create the Plot
+sns.scatterplot(
+    data = df_tech_skills, 
+    x='skill_perc', 
+    y='median_salary', 
+    hue='technology')
+sns.despine()
+sns.set_theme(style='ticks')
+
+#Prepare text labels
+texts = []
+for i, txt in enumerate(df_tech_skills.index):
+    texts.append(plt.text(df_tech_skills['skill_perc'].iloc[i], df_tech_skills['median_salary'].iloc[i], df_tech_skills['skills'].iloc[i]))
+adjust_text(texts)
+
+#Axis customisation
+plt.title('Optimal Skills for UK Data Analysts')
+plt.xlabel('Percentage of Job Postings (%)')
+plt.ylabel('Median Salary (£)')
+plt.xlim(0,50)
+plt.ylim(50_000,140_000)
+ax = plt.gca()
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, _ : f'{int(y/1000)}K'))
+
+#Legend customisation
+plt.legend(title='Technology', loc='upper right')
+
+plt.tight_layout()
+plt.show()
+```
+
+### Results
+
+![Scatterplot of Optimal Skills for Data Analysts](3_Project/Figures/Optimal_Skills_For_Data_Analysts.png)
+
+### Insights
+* This scatter plot shows `python`, `sql`, and `excel` are core skills for UK data analysts and are present in >35 % of job postings. 
+* A great number of analyst (`Tableau`, `looker`, `power bi`, etc.) and programming (`vba`,`r`,`go`) skills are found in <20 % of job postings. 
+* Specialist skills like `sql server` and `flow` are associated with higher median salaries, whereas less complex skills such as `word` and `outlook` have a lower salary.
+
