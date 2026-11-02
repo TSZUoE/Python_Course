@@ -87,7 +87,7 @@ plt.show()
 * The popularity of Python increased over the course of 2023, particularly in the latter half of the year.
 * Tableau, while less in demand compared to other skills, experienced a slight upward trend towards the end of 2023. 
 
-## 3: How well did jobs and skills pay for Data Analysts?
+## 3: How Well Did Jobs and Skills pay for Data Analysts?
 
 ### Salary Analysis for Data Jobs
 
@@ -115,4 +115,45 @@ plt.show()
 #### Insights
 * There is a great variation in the UK salaries of Data Analysts, Data Scientists and Data Engineers. 
 * Data for Senior Data Engineers contains a significant number out outliers, and there is very little data on the salaries for Senior Data Analysts compared to Senior Data Scientists.
-* Median salary increases with role seniority. However, the median salary for a Data Engineer (£ 82,500) was comparable with that of a Senior Data Analyst (£ 83,381).
+* Median salary increases with role seniority. However, the median salary for a Data Engineer (£82,500) was comparable with that of a Senior Data Analyst (£83,381).
+
+### Highest Paid & Most In Demand Skills for UK Data Analysts
+
+#### Visualise the Data
+
+```python
+#Plot the data
+fig, ax = plt.subplots(2,1)
+fig.tight_layout()
+
+#Seaborn code
+sns.barplot(df_top_pay[::-1], x='median', y=df_top_pay.index, ax=ax[0], hue='median', palette='dark:b_r', legend=False) 
+sns.barplot(df_pop_skills,x='median', y=df_pop_skills.index, ax=ax[1], hue='median', palette='dark:r_r', legend=False)
+
+#customise pay
+ax[0].set_title('Top 10 Paying Skills for Data Analysts')
+ax[0].invert_yaxis()
+ax[0].set_ylabel('')
+ax[0].set_xlabel('')
+ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _ : f'{int(x/1_000)}K'))
+
+#customise skills
+ax[1].set_title('Top 10 In Demand Skill for Data Analysts')
+ax[1].set_ylabel('')
+ax[1].set_xlabel('Median Annual Salary (£)')
+ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _ : f'{int(x/1_000)}K'))
+ax[1].set_xlim(ax[0].get_xlim())
+
+sns.set_theme(style='ticks')
+fig.tight_layout()
+plt.show()
+```
+
+#### Results
+
+![Barcharts for top 10 Skills and in demand skills for data analysts ](3_Project/Figures/Top_Pay_Skills_For_Data_Analysts.png)
+
+#### Insights
+* Specialised, technical skills such as `postgresql`, `mssql`, `aws`, `kafka`, and `aurora` were associated with the highest paid roles. However, these were often only found in a single job description and therefore not representative of the wider skills market.
+* Whereas foundational skills such as `Tableau`, `sql` and `looker` are the most in demand even though they may not achieve the highest salary.
+* A clear distinction exists betwee the skills that are highest paid and those that are most in demand. Data analysts aiming to maximise their career potential should develop both a strong foundation of in demand skills as well as more specialised, high-paying skills. 
