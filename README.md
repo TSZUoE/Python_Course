@@ -49,9 +49,9 @@ plt.show()
 
 ### Insights
 
-* SQL and Python are versatile skills which were in demand across Data Analyst, Data Engineer, and Data Scientist roles.
-* SQL was the most requested skill amongst Data Analysts (43 %) and Data Engineers (60 %), respectively.
-* Data Engineers and Data Scientists required more specialised technical skills (Azure, AWS, Spark) compared to data analysts who are expected to be more proficient in data management and analysts tools (Excel, Power BI, Tableau).
+* `sql` and `python` are versatile skills which were in demand across Data Analyst, Data Engineer, and Data Scientist roles.
+* `sql` was the most requested skill amongst Data Analysts (43 %) and Data Engineers (60 %), respectively.
+* Data Engineers and Data Scientists required more specialised technical skills (`azure`, `aws`, `spark`) compared to data analysts who are expected to be more proficient in data management and analysts tools (`excel`, `power bi`, `tableau`).
 
 ## 2. Demands for Data Analyst skills in 2023
 
@@ -83,9 +83,9 @@ plt.show()
 
 ### Insights
 
-* SQL and Excel were consistently the most popular skills for UK Data Analyst job advertisements in 2023. However, the demand for Excel dipped sharply within the final three months.
-* The popularity of Python increased over the course of 2023, particularly in the latter half of the year.
-* Tableau, while less in demand compared to other skills, experienced a slight upward trend towards the end of 2023. 
+* `sql` and Excel were consistently the most popular skills for UK Data Analyst job advertisements in 2023. However, the demand for `excel` dipped sharply within the final three months.
+* The popularity of `python` increased over the course of 2023, particularly in the latter half of the year.
+* `tableau`, while less in demand compared to other skills, experienced a slight upward trend towards the end of 2023. 
 
 ## 3: How Well Did Jobs and Skills pay for Data Analysts?
 
