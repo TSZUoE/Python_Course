@@ -1,11 +1,12 @@
+# Introduction
+
+As part of learning Python I completed an [online data analytics course](https://github.com/lukebarousse/Python_Data_Analytics_Course/tree/main) run by Luke Barousse. This course utilised `numpy`, `pandas`, `matplotlib`, and `seaborn` libraries to explore a dataset of data job listings from 2023. It analysed the top paying and most in demand skills associated with data analyst jobs. The following analyses were done using this dataset, following along with the course and expanding where possible.
+
 # The Analysis
 
 ## 1. What skills were in demand for the top 3 most popular data roles?
 
-I identified the most popular data roles based on the number of job advertisements in 2023. This allowed me to filter for the top 5 skills demanded for the top 3 data roles. This query highlights the most popular job titles and their top skills, showing which skills I should pay attention to depending on the role I am targeting.
-
-View my notebook with detailed steps here:
-[2_Skills_Demand.ipynb](3_Project\2_Skills_Demand.ipynb).
+View my notebook with detailed steps [here](Python_Course/3_Project/2_Skills_Demand.ipynb).
 
 ### Visualise the Data
 
@@ -45,7 +46,7 @@ plt.show()
 ```
 ### Results
 
-![Visualisation of Top Skills for Data Jobs](3_Project/Figures/Skills_Demand.png)
+![Visualisation of Top Skills for Data Jobs](Python_Course/3_Project/Figures/Skills_Demand.png)
 
 ### Insights
 
@@ -55,6 +56,7 @@ plt.show()
 
 ## 2. Demands for Data Analyst skills in 2023
 
+View my notebook with detailed steps [here](Python_Course/3_Project/3_Skills_Trend.ipynb).
 
 ### Visualise the Data
 
@@ -79,7 +81,7 @@ plt.show()
 
 ### Results
 
-![Visualisation of Skill Trends for Data Analysts](3_Project/Figures/Skills_Trend.png)
+![Visualisation of Skill Trends for Data Analysts](Python_Course/3_Project/Figures/Skills_Trend.png)
 
 ### Insights
 
@@ -88,6 +90,8 @@ plt.show()
 * `tableau`, while less in demand compared to other skills, experienced a slight upward trend towards the end of 2023. 
 
 ## 3: How Well Did Jobs and Skills pay for Data Analysts?
+
+View my notebook with detailed steps [here](Python_Course/3_Project/4_Salary_Analysts.ipynb).
 
 ### Salary Analysis for Data Jobs
 
@@ -110,7 +114,7 @@ plt.show()
 ```
 
 #### Results
-![Boxplot of salary for top 6 UK data jobs](3_Project/Figures/Salary_Analysis.png)
+![Boxplot of salary for top 6 UK data jobs](Python_Course/3_Project/Figures/Salary_Analysis.png)
 
 #### Insights
 * There is a great variation in the UK salaries of Data Analysts, Data Scientists and Data Engineers. 
@@ -151,7 +155,7 @@ plt.show()
 
 #### Results
 
-![Barcharts for top 10 Skills and in demand skills for data analysts ](3_Project/Figures/Top_Pay_Skills_For_Data_Analysts.png)
+![Barcharts for top 10 Skills and in demand skills for data analysts ](Python_Course/3_Project/Figures/Top_Pay_Skills_For_Data_Analysts.png)
 
 #### Insights
 * Specialised, technical skills such as `postgresql`, `mssql`, `aws`, `kafka`, and `aurora` were associated with the highest paid roles. However, these were often only found in a single job description and therefore not representative of the wider skills market.
@@ -159,6 +163,8 @@ plt.show()
 * A clear distinction exists betwee the skills that are highest paid and those that are most in demand. Data analysts aiming to maximise their career potential should develop both a strong foundation of in demand skills as well as more specialised, high-paying skills. 
 
 ## 4. What are the Optimal Skills for Data Analysts?
+
+View my notebook with detailed steps [here](Python_Course/3_Project/5_Optimal_Skills.ipynb).
 
 ### Visualise the Data
 
@@ -196,10 +202,12 @@ plt.show()
 
 ### Results
 
-![Scatterplot of Optimal Skills for Data Analysts](3_Project/Figures/Optimal_Skills_For_Data_Analysts.png)
+![Scatterplot of Optimal Skills for Data Analysts](Python_Course/3_Project/Figures/Optimal_Skills_For_Data_Analysts.png)
 
 ### Insights
 * This scatter plot shows `python`, `sql`, and `excel` are core skills for UK data analysts and are present in >35 % of job postings. 
 * A great number of analyst (`Tableau`, `looker`, `power bi`, etc.) and programming (`vba`,`r`,`go`) skills are found in <20 % of job postings. 
 * Specialist skills like `sql server` and `flow` are associated with higher median salaries, whereas less complex skills such as `word` and `outlook` have a lower salary.
 
+# Conclusion
+Through completing this project I have developed my data handling and visualisation skills with `python`. I plan to utilise these skills and expand on them further in future projects. Analysing job posting data has highlighted the importance of key programming tools such as `python` and `sql` within the UK data job market. However, given the relative lack of UK job postings data as well as the relative age of the dataset, it is not possible to know if these analyses are still a true reflection of in demand skills. 
